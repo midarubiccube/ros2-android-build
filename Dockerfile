@@ -27,6 +27,8 @@ RUN apt update
 RUN apt install -y git vim cmake build-essential openjdk-8-jdk
 RUN apt install -y unzip wget gradle python3-pip
 RUN pip3 install -U colcon-common-extensions vcstool lark colcon-ros-gradle
+RUN pip3 install empy==3.3.4
+
 
 RUN wget -O /tmp/android-ndk.zip https://dl.google.com/android/repository/${ANDROID_NDK_VERSION}-linux.zip && mkdir -p /opt/android/ && cd /opt/android/ && unzip -q /tmp/android-ndk.zip && rm /tmp/android-ndk.zip
 
